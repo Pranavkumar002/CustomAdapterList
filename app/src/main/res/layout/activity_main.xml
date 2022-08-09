@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     android:id="@+id/Listview"
     tools:listitem="@layout/layout"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/teal_200"
+    >
 
 
 </ListView>

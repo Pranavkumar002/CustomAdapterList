@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 
-class BaseAdapterClass(var studentInfo: ArrayList<StudentInfo>) : BaseAdapter() {
+class BaseAdapterClass(var studentInfo: ArrayList<StudentInfo>, var clickInterface: ClickInterface) : BaseAdapter() {
     override fun getCount(): Int {
         return studentInfo.size
     }
@@ -28,6 +28,8 @@ class BaseAdapterClass(var studentInfo: ArrayList<StudentInfo>) : BaseAdapter() 
         tvEnterid.setText(studentInfo[position].id.toString())
         tvEntername.setText(studentInfo[position].name)
         tvEnterphone .setText(studentInfo[position].phone)
+
+        initView.setOnClickListener { clickInterface.onClick(studentInfo[position]) }
         return initView
     }
 }
