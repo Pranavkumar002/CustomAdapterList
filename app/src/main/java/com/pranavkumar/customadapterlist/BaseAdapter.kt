@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 
-class BaseAdapterClass(var studentInfo: ArrayList<StudentInfo>, var clickInterface: ClickInterface) : BaseAdapter() {
+        class BaseAdapterClass(var studentInfo: ArrayList<StudentInfo>, var clickInterface: ClickInterface) : BaseAdapter() {
     override fun getCount(): Int {
         return studentInfo.size
     }
